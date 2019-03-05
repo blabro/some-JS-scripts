@@ -1,0 +1,27 @@
+//compiled in node.js by Ideone.com
+
+A = [1, 5, 2, 1, 4, 0]
+function solution(A) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    class Pary {
+        constructor(wart1, wart2) {
+            this.miejsce = wart1;
+            this.wartosc = wart2;
+        }
+    }
+    var inter = []
+    for (var i = 0; i < A.length-1; i++) {
+        //console.log(i, intersections);
+        for (var j = i+1; j < A.length; j++) {
+            if (i + A[i] >= j - A[j]) {
+                inter.push( new Pary(i, j) )
+                //console.log(inter) 
+            }
+        }
+    }
+    
+    console.log('output ' + inter.length)
+    return inter.length
+}
+
+solution(A)
