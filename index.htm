@@ -3,18 +3,18 @@
 </head>
 <body>
 This is voiceClock <br> <br>
-Give interval of speaking : <input type="text" id="intervalid"> in minutes.
+Give interval of speaking : <input type="text" id="intervalid"> minutes.
 <button onclick="main()">Start</button>
 <h1 id="demo"></h1>
 <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
 <script>
 function main() {
 	var interval = document.getElementById("intervalid").value;
-	responsiveVoice.speak("You just started voiceClock function with an interval of " + interval + "minutes");
+	responsiveVoice.speak("You just started StandUp app with an interval of " + interval + "minutes");
 	window.setInterval(function sayTime() {
 	//alert(interval);
 		var d = new Date();
-		var whole = d.getHours()+" "+d.getMinutes();
+		var whole = "StandUp it's"+d.getHours()+" "+d.getMinutes();
 		document.getElementById("demo").innerHTML = whole;
 		responsiveVoice.speak(whole)
 	}, interval*1000*60)
