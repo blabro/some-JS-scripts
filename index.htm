@@ -14,7 +14,7 @@ function main() {
 	window.setInterval(function sayTime() {
 	//alert(interval);
 		var d = new Date();
-		var whole = "StandUp it's"+d.getHours()+" "+d.getMinutes();
+		var whole = " Stand Up! it is "+d.getHours()+" "+d.getMinutes();
 		document.getElementById("demo").innerHTML = whole;
 		responsiveVoice.speak(whole)
 	}, interval*1000*60)
